@@ -27,8 +27,11 @@ var totalProductionCalculation = function(a,b,c,d){
         b + " litres per day <br> Your production in Shed C " + 
         c + " litres per day <br> Your production in Shed D " +
         d + " litres per day <br><br>"
-    document.getElementById("total").innerHTML = "The total production is " +total + " litres per day"
+    document.getElementById("total").innerHTML = "The total production is " + total + " litres per day"
 }
+function reset() {
+    location.reload();
+  } 
 
 var finance=function(){
     var selling_price=45
