@@ -8,7 +8,7 @@
     </head>
     <body>
         <div class="form">
-            <p>parts</p>
+            <p>Production per shade</p>
             <div class="input-field">
                 <label for="shade-a">Shade A</label>
                 <input class="number" type="text" id="shade-a" name="Shade A">
@@ -30,16 +30,16 @@
             </div>
             <input class="button" type="button" value="Find Out" onclick="totalProduction()">
             <input class="button" type="button" value="Reset" onclick="reset()">
-        </div>
-        <div id="big">
-            <p>sold</p>
-            <div class="input-field">
-                <label for="whole-week">The week</label>
-                <input type="text" id="week" name="The week">
-            </div>
-            <div class="input-field">
-                <label for="whole-month">The year</label>
-                <input type="text" id="year" name="The year">
+
+            <div class="big">
+                <p>Average sales</p>
+                <div class="input-field">
+                    <label for="days">Number of days</label>
+                    <input class="number" type="text" id="days" name="Numberof days">
+                </div>
+                <input class="button" type="button" value="Find Out" onclick="finance()">
+                <input class="button" type="button" value="Reset" onclick="reset()">
+                <div class="dispay-days" id="time-display"></div>
             </div>
         </div>
         <script src="fun.js"></script>
