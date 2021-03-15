@@ -48,3 +48,85 @@ var incomeOverTime=function(selling_price, time){
             document.getElementById("time-display").innerHTML="<p>Your yearly income will be " + (1876*selling_price*time) + "</p>"
         }
 }
+var average=function(){
+    var selling_price=45
+    var months=[{
+        name:"jan",
+        days: 31,
+        income:2617020
+    },
+    {
+        name:"feb",
+        days:29,
+        income:2448180
+    },
+    {
+        name:"mar",
+        days:31,
+        income:2617020
+    },
+    {
+        name:"apr",
+        days:30,
+        income:2532600
+    },
+    {
+        name:"mei",
+        days:31,
+        income:2617020
+    },
+    {
+        name:"jun",
+        days:30,
+        income:2532600
+    },
+    {
+        name:"jul",
+        days:31,
+        income:2617020
+    },
+    {
+        name:"aug",
+        days:31,
+        income:2617020
+    },
+    {
+        name:"sep",
+        days:30,
+        income:2532600
+    },
+    {
+        name:"oct",
+        days:31,
+        income:2617020
+    },
+    {
+        name:"nov",
+        days:30,
+        income:2532600
+    },
+    {
+        name:"dec",
+        days:31,
+        income:2617020
+    }
+]
+}
+var averageCalculation = function(jan,feb,mar,apr,mei,jun,jul,aug,sep,oct,nov,dec){
+    var total=jan+feb+mar+apr+mei+jun+jul+aug+sep+oct+nov+dec;
+    
+    document.getElementById("number-months").innerHTML="<p>Your income for January is " +
+    jan + "Ksh <br> Your income for Febuary" +
+    feb + "Ksh <br> Your income for March" +
+    mar + "Ksh <br>  Your income for April" +
+    apr + "Ksh <br> Your income for May" +
+    mei + "Ksh <br> Your income for June" +
+    jun +"Ksh <br> Your income for July" +
+    jul + "Ksh <br> Your income for August" +
+    aug + "Ksh <br> Your income for September" +
+    sep + "Ksh <br> Your income for October" +
+    oct + "Ksh <br> Your income for November"
+    nov + "Ksh <br> Your income for December"
+    dec + "Ksh <br><br> </p>"
+    document.getElementById("number-months").innerHTML = "The average income " + number-months + " Ksh"
+}
