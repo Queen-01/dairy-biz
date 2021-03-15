@@ -49,72 +49,46 @@ var incomeOverTime=function(selling_price, time){
         }
 }
 var average=function(){
-    var selling_price=45
-    var months=[{
-        name:"jan",
-        days: 31,
-        income:2617020
-    },
-    {
-        name:"feb",
-        days:29,
-        income:2448180
-    },
-    {
-        name:"mar",
-        days:31,
-        income:2617020
-    },
-    {
-        name:"apr",
-        days:30,
-        income:2532600
-    },
-    {
-        name:"mei",
-        days:31,
-        income:2617020
-    },
-    {
-        name:"jun",
-        days:30,
-        income:2532600
-    },
-    {
-        name:"jul",
-        days:31,
-        income:2617020
-    },
-    {
-        name:"aug",
-        days:31,
-        income:2617020
-    },
-    {
-        name:"sep",
-        days:30,
-        income:2532600
-    },
-    {
-        name:"oct",
-        days:31,
-        income:2617020
-    },
-    {
-        name:"nov",
-        days:30,
-        income:2532600
-    },
-    {
-        name:"dec",
-        days:31,
-        income:2617020
+
+    var months=[]
+    months.push(document.getElementById("jan").value);
+    months.push(document.getElementById("feb").value);
+    months.push(document.getElementById("mar").value);
+    months.push(document.getElementById("apr").value);
+    months.push(document.getElementById("mei").value);
+    months.push(document.getElementById("jun").value);
+    months.push(document.getElementById("jul").value);
+    months.push(document.getElementById("aug").value);
+    months.push(document.getElementById("sep").value);
+    months.push(document.getElementById("oct").value);
+    months.push(document.getElementById("nov").value);
+    months.push(document.getElementById("dec").value);
+
+    var [jan,feb,mar,apr,mei,jun,jul,aug,sep,oct,nov,dec] =months;
+    var displayShadesSales = document.getElementById("display_shades_sales");
+    if(jan.length === 0 || feb.length === 0 || mar.length === 0 || apr.length === 0 || mei.length===0 ||
+        jun.length===0 || jul.length===0 || aug.length===0 || sep.length===0 || oct.length===0 || nov.length===0 || dec.length===0){
+        displayMonthsSales.innerHTML = "<p>Please fill in the values to calculate sales</p>"
+    }else{
+    //the user input is converted from string variables, to number variables
+        jan = parseFloat(jan);
+        feb = parseFloat(febb);
+        mar = parseFloat(mar);
+        apr = parseFloat(apr);
+        mei = parseFloat(mei);
+        jun = parseFloat(jun);
+        jul = parseFloat(jul);
+        aug = parseFloat(aug);
+        sep = parseFloat(sep);
+        oct = parseFloat(oct);
+        nov = parseFloat(nov);
+        dec = parseFloat(dec);
+        totalAverageCalculation(jan,feb,mar,apr,mei,jun,jul,aug,sep,oct,nov,dec)
     }
-]
 }
-var averageCalculation = function(jan,feb,mar,apr,mei,jun,jul,aug,sep,oct,nov,dec){
+var totalAverageCalculation = function(jan,feb,mar,apr,mei,jun,jul,aug,sep,oct,nov,dec){
     var total=jan+feb+mar+apr+mei+jun+jul+aug+sep+oct+nov+dec;
-    
+
     document.getElementById("number-months").innerHTML="<p>Your income for January is " +
     jan + "Ksh <br> Your income for Febuary" +
     feb + "Ksh <br> Your income for March" +
